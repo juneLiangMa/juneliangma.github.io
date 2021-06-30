@@ -1,11 +1,11 @@
 const path = require('path');
-const toml = require('toml');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const PostPrepPlugin = require('./plugin');
 
 module.exports = {
   entry: './src/index.tsx',
   plugins: [
+    new PostPrepPlugin('./posts/*.post.toml', './public/data'),
     new HtmlWebpackPlugin({
       title: 'Photo Blog',
       meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
@@ -27,13 +27,6 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-      },
-      {
-        test: /\.toml$/i,
-        type: 'json',
-        parser: {
-          parse: toml.parse,
-        },
       },
       {
         test: /\.tsx?$/,
