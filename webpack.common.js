@@ -1,6 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PostPrepPlugin = require('./plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const PostPrepPlugin = require('./plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -11,6 +12,13 @@ module.exports = {
       meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
       template: './public/index.html'
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public/data', to: 'data'
+        }
+      ]
+    })
   ],
   output: {
     chunkFilename: '[name].[contenthash].bundle.js',
@@ -38,4 +46,4 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-};
+}
