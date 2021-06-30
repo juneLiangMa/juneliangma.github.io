@@ -1,1 +1,18 @@
+[info]
 title = "This data is from a toml file"
+date = "6/29/2021"
+tags = ["nature"]
+post = '''
+This is a test post
+
+with newlines!
+
+!!smnp
+
+Here is a fun park.
+'''
+
+[[photos]]
+id = "smnp"
+path = "1/smokeymountainsnationalpark.jpg"
+caption = "Smokey Mountain National Park"

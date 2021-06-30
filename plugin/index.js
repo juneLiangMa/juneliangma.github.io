@@ -25,7 +25,7 @@ class PostPrepPlugin {
   }
 
   getPostName(postObject) {
-    const symbolFreeTitle = postObject.title.replace(/[^\w\s]/gi, '')
+    const symbolFreeTitle = postObject.info.title.replace(/[^\w\s]/gi, '')
     const allLowercase = symbolFreeTitle.toLowerCase()
     const hypenated = allLowercase.replace(/\s+/g, '-')
     return hypenated

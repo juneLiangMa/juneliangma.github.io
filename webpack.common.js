@@ -14,9 +14,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {
-          from: 'public/data', to: 'data'
-        }
+        { from: 'public/data', to: 'data' },
+        { from: 'posts/photos', to: 'data/photos' }
       ]
     })
   ],

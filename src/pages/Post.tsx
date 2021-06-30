@@ -1,6 +1,8 @@
+import { JSONToPost } from '../posts'
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { PostParam, Post } from 'types'
+import { PostParam, Post, JSONPost } from 'types'
+import BodySections from '../component/BodyParagraph'
 
 export default () => {
   const { title } = useParams<PostParam>()
@@ -10,15 +12,22 @@ export default () => {
   useEffect(() => {
     fetch('/data/' + title + '.json')
       .then(res => res.json())
-      .then((result) => {
+      .then((result: JSONPost) => {
         setLoading(false)
-        setPostData(result)
+        setPostData(JSONToPost(result))
       })
   }, [])
 
-  const postTitle = loading ? 'Loading' : postData?.title
+  const postTitle = loading ? 'Loading' : postData?.info.title
+  const postBody = loading ? '' : postData?.info.post
+
+  console.log(postData)
 
   return (
-    <>{postTitle}</>
+    <>
+      <h1>{postTitle}</h1>
+
+      <BodySections text={postBody} photos={postData?.photos} />
+    </>
   )
 }
