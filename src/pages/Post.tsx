@@ -18,15 +18,24 @@ export default () => {
       })
   }, [])
 
+  const dateFormatter = new Intl.DateTimeFormat('en-US')
+
   const postTitle = loading ? 'Loading' : postData?.info.title
+  const postDate = loading ? '' : dateFormatter.format(postData?.info.date)
   const postBody = loading ? '' : postData?.info.post
+
+  const postDates = loading ? '' : postData?.info.tags.map((tag) => <li>{tag}</li>)
 
   console.log(postData)
 
   return (
     <>
       <h1>{postTitle}</h1>
-
+      <h3>{postDate}</h3>
+      <h4>Tags</h4>
+      <ul>
+        {postDates}
+      </ul>
       <BodySections text={postBody} photos={postData?.photos} />
     </>
   )

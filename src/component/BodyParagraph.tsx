@@ -13,9 +13,9 @@ export default ({ text, photos }: BodyParagraphParams) =>
         if (str.match(/!!([A-Z]|[a-z])+/g)) {
           const key = str.replace('!!', '')
           if (photos !== undefined && photos[key]) {
-            return <img src={'/data/photos/' + photos[key].path} />
+            return <img key={str + index} src={'/data/photos/' + photos[key].path} style={{width: '100vw'}} />
           } else {
-            return <p>WARNING: Missing Photo</p>
+            return <p key={str + index}>WARNING: Missing Photo</p>
           }
         } else {
           return <p key={str + index}>{str}</p>

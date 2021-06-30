@@ -7,7 +7,12 @@ export const JSONToPost = (json: JSONPost): Post => {
   })
 
   return {
-    info: json.info,
+    info: {
+      title: json.info.title,
+      tags: json.info.tags,
+      post: json.info.post,
+      date: new Date(json.info.date)
+    },
     photos: photoMap
   }
 }
