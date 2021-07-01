@@ -25,7 +25,7 @@ module.exports = merge(common, {
       `...`,
       new CssMinimizerPlugin(),
     ],
-    moduleIds: 'hashed',
+    moduleIds: 'deterministic',
     runtimeChunk: 'single',
     usedExports: true,
     splitChunks: {

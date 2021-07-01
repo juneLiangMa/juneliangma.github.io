@@ -10,11 +10,14 @@ export interface Photo {
   caption: string,
 }
 
+type PhotoId = string
+
 export interface PostInfo {
   title: string,
   date: Date,
   tags: string[],
-  post: string
+  post: string,
+  cover: PhotoId
 }
 
 export interface PhotoMap {
@@ -26,7 +29,7 @@ export interface Post {
   photos: PhotoMap
 }
 
-export interface JSONPost {
+export interface JsonPost {
   info: PostInfo,
   photos: Photo[],
 }

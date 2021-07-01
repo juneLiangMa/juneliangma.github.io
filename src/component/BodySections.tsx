@@ -1,5 +1,6 @@
 import React from 'react'
-import { Photo, PhotoMap } from 'types'
+import { PhotoMap } from 'types'
+import { getPhotoPath } from '../posts'
 
 interface BodyParagraphParams {
   text?: string,
@@ -13,7 +14,7 @@ export default ({ text, photos }: BodyParagraphParams) =>
         if (str.match(/!!([A-Z]|[a-z])+/g)) {
           const key = str.replace('!!', '')
           if (photos !== undefined && photos[key]) {
-            return <img key={str + index} src={'/data/photos/' + photos[key].path} style={{width: '100vw'}} />
+            return <img className="w-100" key={str + index} src={getPhotoPath(photos[key].path)} />
           } else {
             return <p key={str + index}>WARNING: Missing Photo</p>
           }

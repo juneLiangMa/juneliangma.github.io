@@ -2,6 +2,7 @@
 title = "This data is from a toml file"
 date = "6/29/2021"
 tags = ["nature"]
+cover = "smnp"
 post = '''
 This is a test post
 
@@ -14,5 +15,5 @@ Here is a fun park.
 
 [[photos]]
 id = "smnp"
-path = "1/smokeymountainsnationalpark.jpg"
+path = "1/smokeymountainsnationalpark"
 caption = "Smokey Mountain National Park"

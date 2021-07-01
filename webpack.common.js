@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: './src/index.tsx',
   plugins: [
-    new PostPrepPlugin('./posts/*.post.toml', './public/data'),
+    new PostPrepPlugin('./posts/*.post.toml', './posts/photos/**/*.jpg', './public/data'),
     new HtmlWebpackPlugin({
       title: 'Photo Blog',
       meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
@@ -14,13 +14,12 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'public/data', to: 'data' },
-        { from: 'posts/photos', to: 'data/photos' }
+        { from: 'public/data', to: 'data' }
       ]
     })
   ],
   output: {
-    chunkFilename: '[name].[contenthash].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     clean: true,
