@@ -152,7 +152,7 @@ class PostPrepPlugin {
           .toFile(this.getPhotoDest(smallPhoto));
       });
 
-      console.log("[PPP] Conveting Photos...");
+      console.log("[PPP] Converting Photos...");
       const mainPhotoPromises = Promise.all(mainPhotos).then(() =>
         Promise.all(smallPhotos)
       );
