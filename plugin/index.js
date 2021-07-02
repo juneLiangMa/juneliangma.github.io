@@ -112,6 +112,7 @@ class PostPrepPlugin {
     return new Promise((resolve, reject) => {
       const writePromises = tomlObjects.map((obj) => this.writeObjects(obj));
       const allWrites = Promise.all(writePromises);
+      console.log("[PPP] Writing Posts...");
 
       allWrites
         .then((postObjects) => {
@@ -127,7 +128,6 @@ class PostPrepPlugin {
                 return;
               }
 
-              console.log("Posts Updated Successfully!");
               resolve();
             }
           );
@@ -152,6 +152,7 @@ class PostPrepPlugin {
           .toFile(this.getPhotoDest(smallPhoto));
       });
 
+      console.log("[PPP] Conveting Photos...");
       const mainPhotoPromises = Promise.all(mainPhotos).then(() =>
         Promise.all(smallPhotos)
       );
@@ -161,6 +162,7 @@ class PostPrepPlugin {
 
   processPhotos() {
     return new Promise((resolve, reject) => {
+      console.log("[PPP] Getting Photos to Convert...");
       glob(this.photoGlob, {}, (er, files) =>
         this.onPhotoGlob(er, files)
           .then(() => resolve())
@@ -203,6 +205,8 @@ class PostPrepPlugin {
           );
         }
 
+        console.log("[PPP] Starting Compile...");
+
         if (!existsSync(this.destDir)) {
           mkdirSync(this.destDir);
           mkdirSync(join(this.destDir, "photos"));
@@ -213,7 +217,10 @@ class PostPrepPlugin {
 
         glob(this.fileGlob, {}, (er, files) =>
           this.onPostGlob(er, files)
-            .then(() => resolve())
+            .then(() => {
+              console.log("[PPP] Processing Complete!");
+              resolve();
+            })
             .catch((e) => reject(e))
         );
       });
