@@ -1,4 +1,3 @@
-
 .t-center {
   text-align: center;
 }
@@ -10,4 +9,17 @@
 
 p {
   font-size: 1.1em;
+}
+
+p.feed-desc {
+  font-size: 1.3em;
+}
+
+div.collection {
+  width: 100%;
+}
+
+div.collection-card {
+  width: 25em;
+  display: inline-block;
 }
