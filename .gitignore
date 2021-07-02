@@ -38,6 +38,3 @@ Thumbs.db
 dist/**/*
 
 public/data/*
-
-# ignore yarn.lock
-yarn.lock
