@@ -19,6 +19,7 @@ export default ({ feedPost }: FeedPostParams) => {
       <LazyLoadImage
         className="w-100"
         effect="blur"
+        alt={`Cover Photo for ${feedPost.title}`}
         placeholderSrc={getSmallPhotoPath(feedPost.cover)}
         src={getPhotoPath(feedPost.cover)}
       />

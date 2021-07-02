@@ -13,6 +13,7 @@ export default ({ photoKey, photos }: CaptionedPhotoParams) => (
     <LazyLoadImage
       className="w-100"
       effect="blur"
+      alt={`Photo with Caption ${photos[photoKey].caption}`}
       placeholderSrc={getSmallPhotoPathFromKey(photoKey, photos)}
       src={getPhotoPathFromKey(photoKey, photos)}
     />
