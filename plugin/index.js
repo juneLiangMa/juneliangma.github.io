@@ -181,7 +181,7 @@ class PostPrepPlugin {
   }
 
   apply(compiler) {
-    compiler.hooks.emit.tapPromise("Post Prep Plugin", (compilation) => {
+    compiler.hooks.beforeRun.tapPromise("Post Prep Plugin", (compilation) => {
       return new Promise((resolve, reject) => {
         if (typeof this.fileGlob !== "string") {
           reject(
