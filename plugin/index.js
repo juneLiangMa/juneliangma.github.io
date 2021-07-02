@@ -152,7 +152,9 @@ class PostPrepPlugin {
           .toFile(this.getPhotoDest(smallPhoto));
       });
 
-      const mainPhotoPromises = Promise.all([...mainPhotos, ...smallPhotos]);
+      const mainPhotoPromises = Promise.all(mainPhotos).then(() =>
+        Promise.all(smallPhotos)
+      );
       mainPhotoPromises.then(() => resolve()).catch((e) => reject(e));
     });
   }
