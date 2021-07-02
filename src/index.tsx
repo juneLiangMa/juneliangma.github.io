@@ -6,7 +6,8 @@ import App from './App'
 
 import '@ajusa/lit/dist/lit.css'
 import '@ajusa/lit/dist/util.css'
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'react-lazy-load-image-component/src/effects/blur.css'
+import './styles/style.scss'
 
 ReactDOM.render(
   <React.StrictMode>

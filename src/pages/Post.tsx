@@ -19,26 +19,24 @@ export default () => {
       })
   }, [])
 
-  const dateFormatter = new Intl.DateTimeFormat('en-US')
+  const dateFormatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long' })
 
-  const postCoverPhoto = loading || !postData ? null : <LazyLoadImage className="w-100" effect="blur" placeholderSrc={getSmallPhotoPathFromKey(postData!!.info.cover, postData.photos)} src={getPhotoPathFromKey(postData!!.info.cover, postData.photos)} />
+  const postCoverPhoto = loading || !postData ? null : <div className="t-center mt3"><LazyLoadImage className="w-100" effect="blur" placeholderSrc={getSmallPhotoPathFromKey(postData!!.info.cover, postData.photos)} src={getPhotoPathFromKey(postData!!.info.cover, postData.photos)} /></div>
   const postTitle = loading ? 'Loading' : postData?.info.title
   const postDate = loading ? '' : dateFormatter.format(postData?.info.date)
   const postBody = loading ? '' : postData?.info.post
-
-  const postDates = loading ? '' : postData?.info.tags.map((tag) => <li>{tag}</li>)
+  const postTags = loading ? null : postData?.info.tags.map((tag) => <span className="bg-accent bold white ph1 rounded m1">{tag.toUpperCase()}</span>)
 
   console.log(postData)
 
   return (
     <>
       {postCoverPhoto}
-      <h1>{postTitle}</h1>
-      <h3>{postDate}</h3>
-      <h4>Tags</h4>
-      <ul>
-        {postDates}
-      </ul>
+      <div className="t-center">
+        {postTags}
+      </div>
+      <h1 className="t-center">{postTitle}</h1>
+      <h4 className="t-center">{postDate}</h4>
       <BodySections text={postBody} photos={postData?.photos} />
     </>
   )

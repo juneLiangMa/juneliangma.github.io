@@ -1,6 +1,8 @@
 import React from 'react'
 import { PhotoMap } from 'types'
-import { getPhotoPath } from '../posts'
+import { getPhotoPathFromKey, getSmallPhotoPathFromKey } from '../posts'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import CaptionedPhoto from './CaptionedPhoto'
 
 interface BodyParagraphParams {
   text?: string,
@@ -14,7 +16,8 @@ export default ({ text, photos }: BodyParagraphParams) =>
         if (str.match(/!!([A-Z]|[a-z])+/g)) {
           const key = str.replace('!!', '')
           if (photos !== undefined && photos[key]) {
-            return <img className="w-100" key={str + index} src={getPhotoPath(photos[key].path)} />
+            console.log(key)
+            return <CaptionedPhoto photoKey={key} photos={photos} />
           } else {
             return <p key={str + index}>WARNING: Missing Photo</p>
           }
