@@ -1,7 +1,7 @@
 [info]
-title = "This is a testing article"
-date = "6/29/2021"
-tags = ["nature", "test"]
+title = "Second Post"
+date = "6/30/2021"
+tags = ["beep", "boop"]
 cover = "smnp"
 post = '''
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta commodo ultricies. In vitae ultrices ante, vel sagittis neque. Sed vel lacus ultricies, elementum lacus et, egestas purus. Aliquam massa diam, gravida vitae imperdiet ut, dapibus in felis. Duis facilisis pretium lobortis. Aliquam malesuada metus et sem bibendum, eget consequat ligula feugiat. Nulla rutrum at ipsum eu aliquet. Morbi finibus pretium imperdiet. Aenean in est leo.
