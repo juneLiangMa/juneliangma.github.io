@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: 14
           cache: "yarn"
-      - run: SHARP_IGNORE_GLOBAL_LIBVIPS=true yarn install
-      - run: yarn build
+      - run: yarn install
+      - run: SHARP_IGNORE_GLOBAL_LIBVIPS=true yarn build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
