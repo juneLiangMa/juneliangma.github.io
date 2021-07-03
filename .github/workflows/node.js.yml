@@ -11,6 +11,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - run: sudo apt-get install imagemagick
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
@@ -18,7 +19,7 @@ jobs:
           node-version: 14
           cache: "yarn"
       - run: yarn install
-      - run: SHARP_IGNORE_GLOBAL_LIBVIPS=true yarn build
+      - run: yarn build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
