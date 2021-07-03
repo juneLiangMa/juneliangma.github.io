@@ -16,6 +16,7 @@ module.exports = {
         viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
       },
       template: "./public/index.html",
+      favicon: "./public/favicon.png",
     }),
     new CopyPlugin({
       patterns: [{ from: "public/data", to: "data" }],
