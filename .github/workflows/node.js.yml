@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 14
           cache: "yarn"
+      - name: Fix working directory ownership
+        run: chown root.root .
       - run: yarn install --build-from-source
       - run: yarn build
       - name: Deploy
