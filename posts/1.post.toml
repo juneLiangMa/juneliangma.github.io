@@ -1,19 +1,37 @@
 [info]
-title = "This is a testing article"
-date = "6/29/2021"
-tags = ["nature", "test"]
+title = "Introducing Purlin Press"
+date = "12/08/2021"
+tags = ["introduction", "purlin", "announcements"]
 cover = "smnp"
 post = '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta commodo ultricies. In vitae ultrices ante, vel sagittis neque. Sed vel lacus ultricies, elementum lacus et, egestas purus. Aliquam massa diam, gravida vitae imperdiet ut, dapibus in felis. Duis facilisis pretium lobortis. Aliquam malesuada metus et sem bibendum, eget consequat ligula feugiat. Nulla rutrum at ipsum eu aliquet. Morbi finibus pretium imperdiet. Aenean in est leo.
+Welcome to Purlin Press. My name is June, and I am the founder of this humble little project. This is a small-batch printing press inspired by my desire to self-publish and share my own work as an aspiring film photographer, which has blossomed into an aspiration of doing much more. As this work is currently only in its infancy, this entire document aims to be the guiding vision for this project as I define more what kind of goals I want to achieve with Purlin. No matter what, I want this project to align with these core statements:
 
-Nunc nec tincidunt massa. Curabitur vel erat mi. Curabitur dapibus erat sed velit auctor finibus. Phasellus pulvinar bibendum massa vel egestas. In pulvinar ex erat, sit amet placerat ligula luctus tempus. Cras vitae sem enim. Donec vulputate tincidunt elit, quis pharetra dolor. Suspendisse tristique lacinia dui, quis hendrerit augue faucibus vel. Aenean nec feugiat leo. Morbi eget odio ac eros sagittis maximus sit amet sed diam. 
+1. Purlin will focus on art made with old technologies both hip and very un-hip
+2. Purlin will maintain a focus on local stories and voices to the Pacific Northwest
+3. Purlin will specifically feature creations made by queer and trans people
 
-!!smnp
+As I am still in the proof-of-concept phase, for now I will primarily be showing off my own work with this site in the hopes that I can gain even a little interest in the idea of this project. My ultimate dream, however, is for this project to publish photo zines, poetry, and other small artworks of many different people in an effort to support artists in my region and to give their voices an audience, however big or small that may end up being.
 
-Fusce eu nulla nunc. Pellentesque dapibus sodales tellus, id eleifend leo vestibulum ut. Aenean quis ullamcorper sapien. Duis dui mauris, venenatis id sodales vel, viverra elementum leo. Maecenas sagittis purus at odio sollicitudin, in fermentum leo malesuada. Vestibulum pretium a odio a convallis. Morbi consequat bibendum justo in mollis. Curabitur nec suscipit nisi. Donec ac nisl pulvinar, porta massa vel, bibendum enim. Integer vulputate est ut orci blandit, non pellentesque augue egestas. In hac habitasse platea dictumst. Nam vel nunc nec sem convallis maximus quis in eros. Maecenas suscipit diam tortor, id posuere augue ullamcorper vel. Curabitur lacinia, arcu in mollis commodo, nisl est luctus orci, eu hendrerit mauris tortor sed velit. Mauris vehicula pulvinar fringilla. Cras ipsum est, condimentum et varius eu, porta sit amet quam.
+Why "Purlin"?
+
+I chose Purlin Press for the name for 2 reasons. First, my given name in Chinese roughly translates to purlin, and it was a name given to me by my grandfather that I have come to love the older I get. Quite simply, a purlin is a structural beam in a roof. On Wikipedia, there are examples cited of wood purlins that go back hundreds of years (and I suspect there are even more older structures in parts of the world outside the west that are even older). My grandfather was an architect and an educated man, and I'd guess he probably chose that name for me to inspire a sense of dependability and filial piety, especially as a first-born son (many parts of Chinese culture are about filial piety). Of course, that's not how things turned out for me, and those reasons are not the reasons I love my name. I love the word "purlin" because it represents an essential but oft-unnoticed part of a whole structure that keeps us safe. Seeing pictures of old houses with wood purlins conjurs up images of warm hearths and warmer company. It is my life dream to create art and create space to give that warmth and safety to people who are otherwise ignored or disposed of in the status quo, and that dream is greatly influenced by my time volunteering for Black and Pink, and prison abolition as a movement and philosophy in general. When it came time to pick a name, I was most excited about incorporating this word.
+
+Secondly, and more importantly, I think it sounds pretty, and the alliteration is nice.
+
+What are your goals?
+
+In the near term, I hope to publish a photo zine with some selections from my film photographs over the last 2 years. I hope to write a blog post or two on this site explaining my inspiration, process, and mistakes to supplument this work. If I could manage to create, arrange, print, and distribute this zine to even just 2 or 3 places or people in the next six months, that would be a huge win in my book.
+
+In the long term, say in the next 1-3 years, I would love to publish the work of one or two other people who think this project is compelling and interesting. If I could do that and maybe do one other zine for myself, I would consider this entire project a rousing success.
+
+What kinds of work do you want to publish?
+
+Besides just film photography, which I know is expensive and inaccessible for many people, I also have a manual stamp printing press which can publish small pages of text at a time. The look from these prints are pretty rough, but I personally love the aesthetic and while I have mostly just printed test pages with exerpts from Sappho, I would love to do more with this press to print small poems and stories. I also am able to print photos from any digital sources, and would love to do projects focusing on old digital cameras and old phone cameras, which are much easier to buy and use from places like Goodwill than film cameras.
+
+For film photography specifically, I have the means to develop black-and-white 35mm film, as well as scan 35mm film. Coupled with my high-quality inkjet photo printer, I am able to complete the whole end-to-end process from shooting film to printing it, at least for 35mm black and white film. It's because of this that I hope to publish my first zine through Purlin Press in the near term.
+
+How can I contribute?
+
+As of this writing, Purlin press is not yet ready to accept submissions for other work. I want to refrain from taking too much on at once until I can prove to myself that I can actually do this whole process. If you still wish to drop a note or idea or feedback to us, feel free to send an email to contact@purlinpress.com.
 '''
 
-[[photos]]
-id = "smnp"
-path = "1/smokeymountainsnationalpark"
-caption = "Smokey Mountain National Park"
