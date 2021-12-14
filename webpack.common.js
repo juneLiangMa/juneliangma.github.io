@@ -1,11 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const PostPrepPlugin = require("./plugin");
+const JunePlugin = require("webpack-june");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
   plugins: [
-    new PostPrepPlugin(
+    new JunePlugin(
       "./posts/*.post.toml",
       "./posts/photos/**/*.jpg",
       "./public/data"
